@@ -1,0 +1,3 @@
+[submodule "generators/app/templates/basekotlinandroid"]
+	path = generators/app/templates/basekotlinandroid
+	url = git@github.com:pratamawijaya/BaseKotlinAndroid.git

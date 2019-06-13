@@ -1,9 +1,0 @@
-{
-  "generator-basekotlin-android": {
-    "promptValues": {
-      "Name": "apik",
-      "targetSdk": "29",
-      "minSdk": "21"
-    }
-  }
-}

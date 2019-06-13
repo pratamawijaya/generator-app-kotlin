@@ -78,10 +78,6 @@ module.exports = class extends Generator {
             this.fs.copy(appPath + filePath, dest);
         };
 
-        // copyDotFile('gitignore');
-        // copyDotFile('app/gitignore');
-        // copyDotFile('travis')
-
         this.fs.copy(appPath + 'codecov.yml','codecov.yml')
         this.fs.copy(appPath + 'default-detekt-config.yml','default-detekt-config.yml')
         this.fs.copy(appPath + 'detekt.gradle','detekt.gradle')
@@ -105,13 +101,4 @@ module.exports = class extends Generator {
         this.fs.copyTpl(appPath + 'app/src/main/res/layout', 'app/src/main/res/layout', this.props);
         this.fs.copyTpl(appPath + 'app/src/test/java/com/pratamawijaya/basekotlin', 'app/src/test/java/' + packageDir, this.props);
     }
-
-
-    // method1(){
-    //     this.log('method 1 run')
-    // }
-
-    // method2(){
-    //     this.log('method 2 run')
-    // }
 };

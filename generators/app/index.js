@@ -58,7 +58,7 @@ module.exports = class extends Generator {
 
         mkdirp('app');
         mkdirp('app/src/main/assets');
-        mkdirp('app/src/main/kotlin/' + packageDir);
+        mkdirp('app/src/main/java/' + packageDir);
         mkdirp('app/src/androidTest/java/' + packageDir);
         mkdirp('app/src/commonTest/java/' + packageDir);
         mkdirp('app/src/test/resources');
@@ -78,6 +78,11 @@ module.exports = class extends Generator {
             this.fs.copy(appPath + filePath, dest);
         };
 
+        // copyDotFile('gitignore');
+        // copyDotFile('app/gitignore');
+
+        this.fs.copy(appPath + '.gitignore', '.gitignore');
+        this.fs.copy(appPath + 'app/.gitignore', 'app/.gitignore');
         this.fs.copy(appPath + 'codecov.yml','codecov.yml')
         this.fs.copy(appPath + 'default-detekt-config.yml','default-detekt-config.yml')
         this.fs.copy(appPath + 'detekt.gradle','detekt.gradle')
@@ -98,6 +103,7 @@ module.exports = class extends Generator {
         this.fs.copyTpl(appPath + 'app/build.gradle', 'app/build.gradle', this.props);
         this.fs.copyTpl(appPath + 'app/src/androidTest/java/com/pratamawijaya/basekotlin', 'app/src/androidTest/java/' + packageDir, this.props);
         this.fs.copyTpl(appPath + 'app/src/main/AndroidManifest.xml', 'app/src/main/AndroidManifest.xml', this.props);
+        this.fs.copyTpl(appPath + 'app/src/main/java/com/pratamawijaya/basekotlin', 'app/src/main/java/' + packageDir, this.props);
         this.fs.copyTpl(appPath + 'app/src/main/res/layout', 'app/src/main/res/layout', this.props);
         this.fs.copyTpl(appPath + 'app/src/test/java/com/pratamawijaya/basekotlin', 'app/src/test/java/' + packageDir, this.props);
     }

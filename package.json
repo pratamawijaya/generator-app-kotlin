@@ -23,6 +23,7 @@
     "path": "^0.12.7",
     "replace": "^1.1.0",
     "rimraf": "^2.6.3",
+    "simple-git": "^1.116.0",
     "yeoman-generator": "^4.0.1",
     "yosay": "^2.0.2"
   }

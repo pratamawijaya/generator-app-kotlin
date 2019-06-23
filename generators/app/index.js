@@ -81,8 +81,8 @@ module.exports = class extends Generator {
         // copyDotFile('gitignore');
         // copyDotFile('app/gitignore');
 
-        this.fs.copy(appPath + '.gitignore', '.gitignore');
-        this.fs.copy(appPath + 'app/.gitignore', 'app/.gitignore');
+        // this.fs.copy(appPath + '.gitignore', '.gitignore');
+        // this.fs.copy(appPath + 'app/.gitignore', 'app/.gitignore');
         this.fs.copy(appPath + 'codecov.yml','codecov.yml')
         this.fs.copy(appPath + 'default-detekt-config.yml','default-detekt-config.yml')
         this.fs.copy(appPath + 'detekt.gradle','detekt.gradle')
